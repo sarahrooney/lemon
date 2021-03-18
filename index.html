@@ -1,0 +1,122 @@
+<style>
+  body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: white;
+    perspective: 600px;
+    overflow: hidden;
+  }
+  
+  .field {
+    background: white;
+    filter: blur(50px) contrast(40);
+  }
+  
+  .field div {
+    position: relative;
+    width: 100%;
+    height: 34vh;
+    background: cornflowerblue;
+    border-radius: 50%;
+    
+    animation: widthWobble 1s ease-in-out infinite;
+  }
+  .field div.purple {
+    position: absolute;
+    left: -50vw;
+    top: 0;
+    width: 100%;
+    height: 500px;
+    background: purple;
+    border-radius: 50%;
+    
+    animation: widthWobble 1s ease-in infinite;
+  }
+  .field div.purple--2 {
+    left: 50vw;
+  }
+  .field div.purple--3 {
+    top: auto;
+    bottom: 0;
+    left: -50vw;
+  }
+  .field div.purple--4 {
+    top: auto;
+    bottom: 0;
+    left: 50vw;
+  }
+  
+  .field div.green {
+    position: absolute;
+    left: 0vw;
+    top: 25vh;
+    width: 100%;
+    height: 50vh;
+    background: LawnGreen;
+    border-radius: 50%;
+    
+    animation: widthWobble 1s ease-in infinite;
+  }
+  
+  .field div span {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    background: #000;
+    border-radius: 100%;
+    transform: translateY(-50%);
+  }
+  
+  @keyframes widthWobble {
+    0% {
+      transform: scaleX(1);
+    }
+    25% {
+      transform: scaleX(0.5);
+    }
+    50% {
+      transform: scaleX(0.6);
+    }
+    75% {
+      transform: scaleX(0.3);
+    }
+    100% {
+      transform: scaleX(1);
+    }
+  }
+</style>
+
+<body>
+  <div class="field">
+    <div>
+      <span></span>
+    </div>
+    <div>
+      <span></span>
+    </div>
+    <div>
+      <span></span>
+    </div>
+    
+    <div class="purple">
+      <span></span>
+    </div>
+    <div class="purple purple--2">
+      <span></span>
+    </div>
+    <div class="purple purple--3">
+      <span></span>
+    </div>
+    <div class="purple purple--4">
+      <span></span>
+    </div>
+    
+    <div class="green">
+      <span></span>
+    </div>
+  </div>
+</body>

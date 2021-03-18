@@ -88,6 +88,31 @@
       transform: scaleX(1);
     }
   }
+  
+  .heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50vw;
+    filter: blur(40px) contrast(30);
+/*     animation: filterGif 2s ease-in infinite; */
+  }
+  
+/*   @keyframes filterGif {
+    0% {
+      filter: blur(20px) contrast(10);
+    }
+    25% {
+      filter: blur(20px) contrast(500);
+    }
+    50% {
+      filter: blur(60px) contrast(200);
+    }
+    100% {
+      filter: blur(50px) contrast(40);
+    }
+  } */
 </style>
 
 <body>
@@ -119,4 +144,6 @@
       <span></span>
     </div>
   </div>
+  
+  <img class="heart" src="blackheart.gif" alt="heart gif">
 </body>
